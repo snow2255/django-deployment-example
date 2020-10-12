@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- latest compailed and minified css -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+    <!-- <script type="text/javascript" src="file:///C:/Users/Snow/Desktop/django_lectures/bootstrap-4.5.2-dist/js/bootstrap.min.js.map"></script> -->
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <ul class="nav navbar-nav">
+          <li><a classs="navbar-brand" href="{% url 'index' %}">BRAND</a></li>
+          <li><a class="navbar-link" href="{% url 'admin:index' %}">Admin</a></li>
+          <li><a class="navbar-link" href="{% url 'basic_app:other' %}">Other</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      {% block body_block %}
+      <!-- anything outside of this will be inherited if you extend!-->
+      {% endblock %}
+
+    </div>
+  </body>
+</html>
